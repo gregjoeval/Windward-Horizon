@@ -1,8 +1,8 @@
 #!/bin/bash
 
-SERVER_REMOTE_FILE=http://www.tasharen.com/windward/WWServer.zip
-SERVER_TEMP_FILE=/tmp/WWServer.zip
-SERVER_LOCAL_FILE=/home/windward/WWServer.zip
+SERVER_REMOTE_FILE=http://www.tasharen.com/wh/WHServer.zip
+SERVER_TEMP_FILE=/tmp/WHServer.zip
+SERVER_LOCAL_FILE=/home/windward/WHServer.zip
 
 echo "Downloading latest dedicated server"
 
@@ -40,5 +40,5 @@ fi
 
 cd /home/windward
 
-mono WWServer.exe -service -name "${WINDWARD_SERVER_NAME}" -world "${WINDWARD_SERVER_WORLD}" ${WINDWARD_SERVER_IS_PUBLIC} -tcp ${WINDWARD_SERVER_PORT} -http
+mono WHServer.exe -service -name "${WINDWARD_SERVER_NAME}" -http -port ${WINDWARD_SERVER_PORT} ${WINDWARD_SERVER_IS_PUBLIC} -world "${WINDWARD_SERVER_WORLD}"
 
