@@ -1,7 +1,8 @@
-# Windward Game Server
+# Windward Horizon Game Server
 
-See more about Windward at: [http://www.tasharen.com/windward/](http://www.tasharen.com/windward/)
+_Based on the original docker image [gameservers/windward](https://hub.docker.com/r/gameservers/windward/)_
 
+See more about Windward at: [https://store.steampowered.com/app/2665460/Windward_Horizon/](https://store.steampowered.com/app/2665460/Windward_Horizon/)
 
 You can use the following environment variables passed to the Docker container to configure your server.
 
@@ -19,7 +20,5 @@ docker run --name "Windward-Server"        \
   -e WINDWARD_SERVER_ADMIN=123456787453234 \
   -v ~/WindwardServer:/data/windward       \
   -p 5127:5127                             \
-  gameservers/windward:latest
+  gregjoeval/windward-horizon:latest
 ```
-
-For more information on the Windward Dedicated server see the windward wiki at gamepedia: [http://windward.gamepedia.com/Dedicated_Server](http://windward.gamepedia.com/Dedicated_Server)
