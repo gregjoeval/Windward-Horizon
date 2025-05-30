@@ -12,19 +12,18 @@ ENV WINDWARD_SERVER_NAME="Windward Horizon Server" \
 
 RUN apk --update --no-cache add bash curl unzip
 
-RUN mkdir -p /windward && \
-    chmod ugo=rwx /windward && \
+RUN mkdir -p /windward-horizon && \
+    chmod ugo=rwx /windward-horizon && \
 	addgroup -g $PGID -S $GROUP && \
 	adduser -u $PUID -G $GROUP -s /bin/sh -SD $USER && \
-    chown -R $USER:$GROUP /windward /home/windward && \
-	ln -s /windward /home/windward/Windward
+    chown -R $USER:$GROUP /windward-horizon
 	
-VOLUME /windward
+VOLUME /windward-horizon
 
 EXPOSE $WINDWARD_SERVER_PORT
 
-COPY ./windward.sh /
+COPY ./windward-horizon.sh /
 
 USER $USER
 
-CMD ["/windward.sh"]
+CMD ["/windward-horizon.sh"]
