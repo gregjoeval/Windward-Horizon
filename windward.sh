@@ -32,13 +32,13 @@ if [ "${WINDWARD_SERVER_PUBLIC}" = "1" ]; then
 fi
 
 if [ "${WINDWARD_SERVER_ADMIN}" ]; then
-	mkdir -p /data/windward/Windward/ServerConfig
-	if [ ! -f /data/windward/Windward/ServerConfig/admin.txt ]; then
-		echo "${WINDWARD_SERVER_ADMIN}" > /data/windward/Windward/ServerConfig/admin.txt
+	mkdir -p /home/windward/Windward/ServerConfig
+	if [ ! -f /home/windward/Windward/ServerConfig/admin.txt ]; then
+		echo "${WINDWARD_SERVER_ADMIN}" > /home/windward/Windward/ServerConfig/admin.txt
 	fi
 fi
 
 cd /home/windward
 
-mono WHServer.exe -service -name "${WINDWARD_SERVER_NAME}" -http -port ${WINDWARD_SERVER_PORT} ${WINDWARD_SERVER_IS_PUBLIC} -world "${WINDWARD_SERVER_WORLD}"
+mono WHServer.exe -service -name "${WINDWARD_SERVER_NAME}" -port ${WINDWARD_SERVER_PORT} -world "${WINDWARD_SERVER_WORLD}" ${WINDWARD_SERVER_IS_PUBLIC}
 

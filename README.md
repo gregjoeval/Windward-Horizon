@@ -18,7 +18,7 @@ docker run --name "Windward-Horizon-Server"        \
   -e WINDWARD_SERVER_NAME="My Server"      \
   -e WINDWARD_SERVER_WORLD="world"         \
   -e WINDWARD_SERVER_ADMIN=123456787453234 \
-  -v ~/WindwardServer:/data/windward       \
+  -v ~/WindwardServer:/home/windward       \
   -p 5123:5123                             \
   gregjoeval/windward-horizon:latest
 ```
