@@ -28,9 +28,9 @@ if [ "${WINDWARD_SERVER_PUBLIC}" = "1" ]; then
 fi
 
 if [ "${WINDWARD_SERVER_ADMIN}" ]; then
-	mkdir -p /windward-horizon/Windward/ServerConfig
-	if [ ! -f /windward-horizon/Windward/ServerConfig/admin.txt ]; then
-		echo "${WINDWARD_SERVER_ADMIN}" > /windward-horizon/Windward/ServerConfig/admin.txt
+	mkdir -p /windward-horizon/ServerConfig
+	if [ ! -f /windward-horizon/ServerConfig/admin.txt ]; then
+		echo "${WINDWARD_SERVER_ADMIN}" > /windward-horizon/ServerConfig/admin.txt
 	fi
 fi
 
