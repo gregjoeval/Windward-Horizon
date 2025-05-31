@@ -30,7 +30,7 @@ fi
 if [ "${WINDWARD_SERVER_ADMIN}" ]; then
 	mkdir -p /windward-horizon/Windward/ServerConfig
 	if [ ! -f /windward-horizon/Windward/ServerConfig/admin.txt ]; then
-		echo "${WINDWARD_SERVER_ADMIN}" > /windward-horizon/Windward/ServerConfig/admin.txt
+		echo "${WINDWARD_SERVER_ADMIN}" > /windward-horizon/ServerConfig/admin.txt
 	fi
 fi
 
